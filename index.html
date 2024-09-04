@@ -3,47 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>sign-up</title>
 </head>
 <body>
     <header>
-        <div class="logo">
-            <img src="logo.ss" alt="logo">
-            woplu
+        <div class="brand">
+            <img src="login-page-svg.svg" alt="logo" class="logo">
+            <p class="brand-name">WOPLU</p>
+            <p class="author">by <a href="https://github.com/Punith1117/sign-up-form" title="github source code">Punith1117</a></p>
+        </div>
+        <div class="credits">
+            logo from <a href="svgrepo.com">svgrepo.com</a> & background from <a href="https://www.pexels.com/photo/sunflowers-1322185/">Brett Sayles</a>
         </div>
     </header>
     <div class="main-content">
-        <section class="text">Do it Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit doloremque enim quis iusto consequatur rerum corporis eligendi ut explicabo quaerat, iste veniam, impedit, atque ab molestiae aut fugiat maxime eveniet!</section>
+        <section class="text">
+            <p>
+                Do it Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet adipisicing elit.
+            </p>
+            <br>
+            <p>
+                Sit doloremque enim quis iusto consequatur rerum corporis eligendi ut explicabo quaerat, iste veniam, impedit, atque ab molestiae aut fugiat maxime eveniet!
+            </p>
+        </section>
         <section class="form">
             <form action="jjj.com" method="get">
+                <p style="font-size: larger; margin: 1rem; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-weight: 800; color: rgb(172, 255, 78); cursor: default;">get started NOW!</p>
                 <div class="entry-section">
                     <div class="entry">
                         <label for="firstName">First name</label>
-                        <input type="text" name="firstName" id="firstName">
+                        <input type="text" name="firstName" id="firstName" minlength="4" maxlength="15"  pattern="^[a-zA-Z]+$" required>
+                        <p class="firstNameError error"></p>
                     </div>
                     <div class="entry">
                         <label for="secondName">Second name</label>
-                        <input type="text" name="secondName" id="secondName">
+                        <input type="text" name="secondName" id="secondName" minlength="3" maxlength="15" pattern="^[a-zA-Z]+$" placeholder="optional">
+                        <p class="secondNameError error"></p>
                     </div>
                     <div class="entry">
                         <label for="email">Email</label>
-                        <input type="email" name="email" id="email">
+                        <input type="text" name="email" id="email" minlength="15" pattern="^[a-zA-Z0-9._+\-]+@gmail\.com$" required>
+                        <p class="emailError error"></p>
                     </div>
                     <div class="entry">
                         <label for="phone">Phone Number</label>
-                        <input type="number" name="phone" id="phone">
+                        <input type="text" name="phone" id="phone" pattern="^[0-9]+$" placeholder="optional">
+                        <p class="phoneError error"></p>
                     </div>
                     <div class="entry">
                         <label for="pass">Password</label>
-                        <input type="password" name="pass" id="pass">
+                        <input type="password" name="pass" id="pass" minlength="5" maxlength="20" required>
+                        <p class="passError error"></p>
                     </div>
                     <div class="entry">
                         <label for="confirmPass">Confirm Password</label>
-                        <input type="password" name="confirmPass" id="confirmPass">
+                        <input type="password" name="confirmPass" id="confirmPass" minlength="5" maxlength="20" required>
+                        <p class="confirmPassError error"></p>
                     </div>
                 </div>
                 <div class="submit">
-                    <button type="submit">Create Account</button>
+                    <button type="submit" id="submit-button">Create Account</button>
                 </div>
             </form>
         </section>
@@ -51,5 +71,6 @@
             Already have an account? <a href="login.ss">Log in</a>
         </section>
     </div>
+    <script src="script.js" defer></script>
 </body>
 </html>
