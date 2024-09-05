@@ -46,7 +46,7 @@ userInputs.forEach(function(uInput) {
 
         if (uInput.id == 'phone') {
             if (uInput.validity.patternMismatch) {
-                phoneError.textContent = 'no numbers are allowed';
+                phoneError.textContent = 'only numbers are allowed';
             } else if (uInput.value.length != 10) {
                 if (uInput.value.length == 0) {
                     phoneError.textContent = '';
